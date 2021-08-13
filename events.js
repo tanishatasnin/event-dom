@@ -23,3 +23,24 @@ function makeBlue()
                {
                               document.body.style.backgroundColor='green';
                }
+// using by addEventListener 
+// botton-gray 
+               const grayButton=document.getElementById("button-gray");
+               grayButton.addEventListener('click',makegray)
+               function makegray()
+{
+               document.body.style.backgroundColor='gray';
+}
+
+// by inner funtion 
+// button yellow 
+const yellowButton=document.getElementById("button-yellow");
+yellowButton.addEventListener('click',function makeyellow()
+{
+document.body.style.backgroundColor='yellow';
+})
+
+// direct shortcut
+document.getElementById('light-blue').addEventListener('click', function () {
+               document.body.style.backgroundColor = 'lightblue';
+           })
