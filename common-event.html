@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               <meta charset="UTF-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+<body>
+      <p id="first-click"></p>
+      <input id="name-field" type="text"> 
+      <button id="update-name">name</button>
+      <button onclick="justHandel()">just function</button>     
+      <button id="handle-direct">`direct add event listener </button> 
+      <script>
+            function justHandel()
+            {
+                  const clickingMathod=document.getElementById('first-click');
+                  clickingMathod.innerText="set by using function";
+            }
+
+            // direct 
+            document.getElementById('handle-direct')
+            .addEventListener('click',function(){
+                  const p=document.getElementById('first-click');
+                  p.innerText='set by direact add event lisener'
+            })
+
+            // direct 
+            document.getElementById('update-name').addEventListener('click',function()
+     {
+        const namefield=document.getElementById('name-field');
+        const p=document.getElementById('first-click');
+                  p.innerText=namefield.value;
+                  namefield.value='';
+     }
+            )
+      </script>  
+</body>
+</html>
